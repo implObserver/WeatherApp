@@ -12,13 +12,16 @@
     font-size: 2vh;
 }
 
+.template {
+    display: none;
+}
+
 span {
     padding-left: 1vh;
     padding-right: 1vh;
     height: min-content;
     width: min-content;
 }
-
 
 html {
     font-family: Roboto;
