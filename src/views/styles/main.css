@@ -12,20 +12,48 @@
     font-size: 2vh;
 }
 
-html {
-    font-family: Roboto;
-}
-
-.wrapper {
-    display: grid;
-    max-width: 100%;
-    max-height: 100%;
-    background-color: red;
-}
-
 span {
     padding-left: 1vh;
     padding-right: 1vh;
     height: min-content;
     width: min-content;
 }
+
+
+html {
+    font-family: Roboto;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.current-weather {
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+    justify-content: space-between;
+    border: 1vh red solid;
+}
+
+.info {
+    width: 10vh;
+    height: 30vh;
+    border: 1px green solid;
+}
+
+.details {
+    width: 10vh;
+    height: 30vh;
+    border: 1px green solid;
+}
+
+.forecast-weather {
+    border: 1vh blue solid;
+}
+
+@media screen and (max-aspect-ratio:1/1.0000001) {}
+
+@media screen and (min-aspect-ratio: 1/1) {}
