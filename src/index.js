@@ -1,4 +1,7 @@
-import { setCurrentWeatherForCity } from './models/weatherApi';
+import { fillWeatherDetails } from './models/fillingWidgets/details';
+import { fillCurrentWeatherData } from './models/fillingWidgets/info';
+
 import './views/styles/main.css';
 
-setCurrentWeatherForCity('London');
+fillCurrentWeatherData('London');
+fillWeatherDetails('London');

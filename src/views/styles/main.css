@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
 *,
 *::before,
 *::after {
@@ -6,6 +8,7 @@
     border: 0;
     height: 100%;
     box-sizing: border-box;
+    font-family: montserrat, sans-serif;
 }
 
 :root {
@@ -42,21 +45,98 @@ html {
 }
 
 .info {
-    width: 10vh;
-    height: 30vh;
-    border: 1px green solid;
+    display: grid;
+    width: max-content;
+    height: min-content;
+    padding: 2rem;
+}
+
+.description {
+    font-size: 3rem;
+}
+
+.city {
+    font-size: 1.5rem;
+    padding-bottom: 1vh;
+}
+
+.time {
+    padding-bottom: 3vh;
+}
+
+.temperature-wrapper {
+    font-size: 4rem;
+}
+
+.button-wrapper {
+    display: flex;
+    padding: 1vh;
+}
+
+.button-wrapper > button {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.info > .icon-wrapper {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 10vh;
 }
 
 .details {
-    width: 10vh;
-    height: 30vh;
-    border: 1px green solid;
+    display: grid;
+    width: max-content;
+    height: max-content;
+    padding: 3rem;
+    gap: 5vh;
+}
+
+.detail {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    gap: 1vh;
+}
+
+.detail > .icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6vh;
+    height: 6vh;
+}
+
+.data {
+    display: grid;
+    grid-template-rows: min-content min-content;
+}
+
+.value {
 }
 
 .forecast-weather {
     border: 1vh blue solid;
+    display: grid;
+    grid-template-rows: min-content 1fr;
 }
 
-@media screen and (max-aspect-ratio:1/1.0000001) {}
+.panel-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px red solid;
+}
 
-@media screen and (min-aspect-ratio: 1/1) {}
+.panel {
+    display: grid;
+    grid-template-columns: repeat(7,min-content);
+    height: min-content;
+    border: 1px green solid;
+}
+
+@media screen and (max-aspect-ratio: 1/1.0000001) {
+}
+
+@media screen and (min-aspect-ratio: 1/1) {
+}

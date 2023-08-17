@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Feels Like",
+        "class": "feels-like"
+    },
+    {
+        "name": "Humidity",
+        "class": "humidity"
+    },
+    {
+        "name": "Wind Speed",
+        "class": "wind-speed"
+    }
+]
