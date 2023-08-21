@@ -18,7 +18,7 @@ export const fillCurrentWeatherData = async (city) => {
     }
 };
 
-const getIcon = async (promise) => {
+export const getIcon = async (promise) => {
     let url = await promise;
     const image = new Image();
     image.src = url;
