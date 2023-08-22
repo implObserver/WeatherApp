@@ -15,5 +15,6 @@ export const getDaysForecastWeatherForCity = async (days, city) => {
     const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&days=${days}&q=${city}`;
     const response = await fetch(apiUrl, { mode: 'cors' });
     const data = await response.json();
+    console.log(data)
     return data;
 };

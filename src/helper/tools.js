@@ -9,3 +9,11 @@ export const asyncQuerySelector = async (node, query) => {
         return null;
     }
 };
+
+export const removeChilds = (node) => {
+    if (node !== null) {
+        while (node.firstChild) {
+            node.removeChild(node.lastChild);
+        }
+    }
+}

@@ -1,5 +1,4 @@
 import { building as detailsBuilding } from '../views/nodes/detailsBuilding';
-import { building as forecastDaysBuilding } from '../views/nodes/forecastDaysBuilding';
 
 export const Info = (() => {
     const prototype = document.querySelector('.info');
@@ -20,8 +19,12 @@ export const Details = (async () => {
     return { feelsLike, humidity, windSpeed };
 })();
 
-export const ForecastDays = (async () => {
-    await forecastDaysBuilding();
-    const days = Array.from(document.querySelectorAll('.f'));
-    return { days };
-})();
+export const forecastDays = async () => {
+    const allDays = Array.from(document.querySelectorAll('.d'));
+    return { allDays };
+};
+
+export const forecastHours = async () => {
+    const allHours = Array.from(document.querySelectorAll('.h'));
+    return { allHours };
+};
