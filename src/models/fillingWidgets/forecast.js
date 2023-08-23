@@ -38,11 +38,11 @@ export const fillHoursForecast = async (city, fHour, lHour) => {
         forecastHoursBuilding(fHour, lHour);
         const data = await getDaysForecastWeatherForCity(1, city);
         const hours = (await forecastHours()).allHours;
-        console.log(hours)
-        for (let i = fHour; i < lHour; i++) {
-            hours[i].querySelector('.name').textContent = data.forecast.forecastday[0].hour[i].time.split(' ')[1];
-            hours[i].querySelector('.temperature-wrapper').textContent = `${data.forecast.forecastday[0].hour[i].temp_c} \xB0C`;
-            const image = await getIcon(data.forecast.forecastday[0].hour[i].condition.icon);
+        for (let i = 0; i < 8; i++) {
+            const index = i + fHour;
+            hours[i].querySelector('.name').textContent = data.forecast.forecastday[0].hour[index].time.split(' ')[1];
+            hours[i].querySelector('.temperature-wrapper').textContent = `${data.forecast.forecastday[0].hour[index].temp_c} \xB0C`;
+            const image = await getIcon(data.forecast.forecastday[0].hour[index].condition.icon);
             const imageWrapper = hours[i].querySelector('.icon');
             imageWrapper.appendChild(image);
             SmoothVisibility.open(imageWrapper, 0, 1, 400, 'forwards');

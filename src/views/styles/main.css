@@ -113,11 +113,10 @@ html {
     grid-template-rows: min-content min-content;
 }
 
-.value {}
-
 .forecast-weather {
     border: 1vh blue solid;
     display: grid;
+    gap: 1vh;
     grid-template-rows: min-content 1fr;
 }
 
@@ -130,7 +129,29 @@ html {
 
 .changer {
     display: grid;
+    align-items: center;
+    gap: 1vh;
     grid-template-columns: repeat(5, min-content);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.down,
+.up {
+    display: flex;
+    height: 3vh;
+}
+
+.tab {
+    height: 1vh;
+    width: 1vh;
+    border: 0.1vh black solid;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.tab:hover {
+    border: 0.3vh black solid;
 }
 
 .forecast-days,
