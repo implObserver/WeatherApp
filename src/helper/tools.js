@@ -14,5 +14,5 @@ export const removeChilds = (node) => {
     while (node.firstChild) {
         node.removeChild(node.lastChild);
     }
-    console.log(node)
+    console.log(node);
 };

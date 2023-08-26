@@ -18,4 +18,4 @@ export const daysIsActive = async () => {
     const hours = document.querySelector('.forecast-hours');
     button.classList.add('active');
     hours.classList.remove('active');
-}
+};

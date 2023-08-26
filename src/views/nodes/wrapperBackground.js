@@ -1,5 +1,5 @@
-import { getIcon } from "../../models/fillingWidgets/info";
-import { getRandomWallpaper } from "../../models/wallpaperApi"
+import { getIcon } from '../../models/fillingWidgets/info';
+import { getRandomWallpaper } from '../../models/wallpaperApi';
 
 export const setRandomWallpaper = async (option) => {
     const data = await getRandomWallpaper(option);
@@ -8,5 +8,4 @@ export const setRandomWallpaper = async (option) => {
     const image = await getIcon(data.hits[index].largeImageURL);
     const wrapper = document.querySelector('.wrapper');
     wrapper.style.backgroundImage = `url('${image.src}')`;
-    
-}
+};

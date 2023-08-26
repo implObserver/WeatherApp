@@ -5,7 +5,7 @@ import { viewWeather } from './views/nodes/main';
 
 import './views/styles/main.css';
 
-Loader
+Loader;
 
 setListeners();
 let city = (await City).getCity();

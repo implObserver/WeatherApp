@@ -1,7 +1,11 @@
-import { forArrowDown, forArrowUp, forButtonDot } from "../controllers/listeners/changer";
-import { forButtonDays } from "../controllers/listeners/days";
-import { forButtonHours } from "../controllers/listeners/hours";
-import { forSearchField } from "../controllers/listeners/search";
+import {
+    forArrowDown,
+    forArrowUp,
+    forButtonDot,
+} from '../controllers/listeners/changer';
+import { forButtonDays } from '../controllers/listeners/days';
+import { forButtonHours } from '../controllers/listeners/hours';
+import { forSearchField } from '../controllers/listeners/search';
 
 export const setListeners = async () => {
     forSearchField().search;
@@ -10,4 +14,4 @@ export const setListeners = async () => {
     forButtonDot();
     forArrowUp();
     forArrowDown();
-}
+};

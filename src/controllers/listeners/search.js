@@ -1,6 +1,6 @@
-import { City } from "../../models/city";
-import { viewWeather } from "../../views/nodes/main";
-import { daysIsActive } from "./days";
+import { City } from '../../models/city';
+import { viewWeather } from '../../views/nodes/main';
+import { daysIsActive } from './days';
 
 export const forSearchField = async () => {
     const input = document.querySelector('.search-field>input');
@@ -12,9 +12,9 @@ export const forSearchField = async () => {
                 viewWeather((await City).getCity());
                 daysIsActive();
             } catch (error) {
-                console.log('Error:', error);
+                console.log(error);
             }
         }
-    })
+    });
     return { search };
-}
+};

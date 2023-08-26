@@ -55,9 +55,11 @@ button {
     grid-template-rows: 1fr min-content;
     max-width: 100%;
     max-height: 100%;
-    background-image: linear-gradient(to right,
-            rgba(black, 0.4),
-            rgba(black, 0.4));
+    background-image: linear-gradient(
+        to right,
+        rgba(black, 0.4),
+        rgba(black, 0.4)
+    );
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -105,7 +107,7 @@ button {
     padding-top: 1vh;
 }
 
-.search-field>input {
+.search-field > input {
     display: flex;
     appearance: none;
     width: 20vh;
@@ -113,7 +115,6 @@ button {
     font-size: 1rem;
     padding: 1vh;
     border-radius: 1vh;
-
 }
 
 .button-wrapper {
@@ -121,12 +122,12 @@ button {
     padding: 1vh;
 }
 
-.button-wrapper>button {
+.button-wrapper > button {
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0);
 }
 
-.info>.icon-wrapper {
+.info > .icon-wrapper {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -147,7 +148,7 @@ button {
     gap: 1vh;
 }
 
-.detail>.icon-wrapper {
+.detail > .icon-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -235,7 +236,7 @@ button {
     height: min-content;
 }
 
-.f>.name {
+.f > .name {
     font-size: 1.8rem;
 }
 
@@ -252,13 +253,13 @@ button {
     padding-bottom: 1vh;
 }
 
-.f>.icon-wrapper {
+.f > .icon-wrapper {
     display: flex;
     justify-content: center;
     height: 6rem;
 }
 
-.h>.temperature-wrapper {
+.h > .temperature-wrapper {
     font-size: 2.5rem;
 }
 
@@ -270,7 +271,7 @@ button {
     .current-weather {
         grid-template-rows: repeat(2, min-content);
         justify-items: center;
-        gap: 1vh
+        gap: 1vh;
     }
 }
 

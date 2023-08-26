@@ -18,7 +18,9 @@ export const fillCurrentWeatherData = async (city) => {
         Info.icon.appendChild(image);
         setRandomWallpaper(data.current.condition.text.replaceAll(' ', '_'));
     } catch (error) {
-        console.log('Error:', error);
+        alert(
+            'Локация не найдена, убедитесь, что название города написано правильно',
+        );
     }
 };
 
