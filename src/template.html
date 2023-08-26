@@ -7,10 +7,10 @@
     <title>Check Weather!</title>
 </head>
 
-<body>
+<body class="body_hide">
     <div class="wrapper">
         <div class="current-weather">
-            <div class="info">
+            <div class="info background">
                 <div class="description"><span></span></div>
                 <div class="city"><span></span></div>
                 <div class="date"><span></span></div>
@@ -25,15 +25,15 @@
                 </div>
             </div>
 
-            <div class="details"></div>
+            <div class="details background"></div>
         </div>
         <div class="forecast-weather">
             <div class="buttons-wrapper">
-                <button class="forecast-days">Days</button>
-                <button class="forecast-hours">Hours</button>
-                <div class="changer">
-                    <div class="down">
-                        <svg class="arrow-left" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="#000000"
+                <button class="forecast-days background active">Days</button>
+                <button class="forecast-hours background">Hours</button>
+                <div class="changer background">
+                    <div class="arrow down">
+                        <svg class="arrow-left" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="#ffffff"
                             viewBox="8.02 6 7.41 12" fill="#f5f5f5">
                             <title>arrow_left</title>
                             <path d="M15.422 16.594l-1.406 1.406-6-6 6-6 1.406 1.406-4.594 4.594z" />
@@ -44,8 +44,8 @@
                     <div class="tab"></div>
                     <div class="tab"></div>
 
-                    <div class="up">
-                        <svg class="arrow-right" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="#000000"
+                    <div class="arrow up">
+                        <svg class="arrow-right" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="#ffffff"
                             viewBox="8.58 6 7.41 12" fill="#f5f5f5">
                             <title>arrow_right</title>
                             <path d="M8.578 16.594l4.594-4.594-4.594-4.594 1.406-1.406 6 6-6 6z" />
@@ -91,8 +91,8 @@
 
 <svgs>
     <svg class="detail humidity" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        version="1.1" id="Layer_1" style="enable-background: new 0 0 512.005 512.005" xml:space="preserve"
-        fill="#000000" viewBox="0 0 512 512.01">
+        version="1.1" fill="#ffffff" id="Layer_1" style="enable-background: new 0 0 512.005 512.005"
+        xml:space="preserve" fill="#000000" viewBox="0 0 512 512.01">
         <g>
             <g>
                 <g>
@@ -111,7 +111,7 @@
         </g>
     </svg>
 
-    <svg class="detail feels-like" xmlns="http://www.w3.org/2000/svg" fill="#000000" id="Capa_1"
+    <svg class="detail feels-like" xmlns="http://www.w3.org/2000/svg" fill="#ffffff" id="Capa_1"
         enable-background="new 0 0 512.002 512.002" viewBox="41.12 0 429.76 512">
         <g>
             <path
@@ -136,7 +136,7 @@
         </g>
     </svg>
 
-    <svg class="detail wind-speed" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="#000000" viewBox="3 6 27 20">
+    <svg class="detail wind-speed" xmlns="http://www.w3.org/2000/svg" version="1.1" fill="#ffffff" viewBox="3 6 27 20">
         <path
             d="M30 14c0-2.209-1.795-4-4-4-2.209 0-4 1.789-4 4h2c0-1.105 0.888-2 2-2 1.105 0 2 0.888 2 2 0 1.105-0.89 2-2.004 2h-22.996v2h23.002c2.208 0 3.998-1.795 3.998-4v0zM21 10c0-2.209-1.795-4-4-4-2.209 0-4 1.789-4 3.997v0.003h2c0-1.105 0.888-2 2-2 1.105 0 2 0.888 2 2 0 1.105-0.897 2-2.006 2h-11.994v2h12.004c2.207 0 3.996-1.795 3.996-4v0zM26 23c0 1.657-1.347 3-3 3v0c-1.657 0-3-1.342-3-2.991v-0.009h2c0 0.552 0.444 1 1 1v0c0.552 0 1-0.444 1-1v0c0-0.552-0.449-1-1.007-1h-13.993v-2h14c1.657 0 3 1.347 3 3v0 0z" />
     </svg>

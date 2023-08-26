@@ -1,5 +1,5 @@
-import { ClockTabs } from "../../models/activeClockTab";
-import { fillHoursForecast } from "../../models/fillingWidgets/forecast";
+import { ClockTabs } from '../../models/activeClockTab';
+import { fillHoursForecast } from '../../models/fillingWidgets/forecast';
 import * as hoursJSON from '../../models/JSON/hours.json';
 
 const hours = hoursJSON.default;
@@ -12,13 +12,11 @@ export const forButtonDot = async () => {
                 if (buttons[i] === button) {
                     setHoursForecast(i);
                     (await ClockTabs).activate(i);
-
                 } else {
                     (await ClockTabs).deactivate(i);
-
                 }
             }
-        })
+        });
     }
 };
 
@@ -44,4 +42,4 @@ const setHoursForecast = async (i) => {
     const fHour = hours[i].hours;
     const lHour = fHour + 8;
     fillHoursForecast('London', fHour, lHour);
-}
+};

@@ -13,7 +13,7 @@
 
 :root {
     font-size: 2vh;
-
+    color: white;
 }
 
 span {
@@ -31,18 +31,48 @@ html {
     font-family: Roboto;
 }
 
+body {
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+.body_hide {
+    opacity: 0;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1vh;
+    color: white;
+    height: 2.5rem;
+    font-size: 0.7rem;
+}
+
 .wrapper {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr min-content;
     max-width: 100%;
     max-height: 100%;
+    background-image: linear-gradient(to right,
+            rgba(black, 0.4),
+            rgba(black, 0.4));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.background {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 1vh;
+    border: 0.5vh black solid;
 }
 
 .current-weather {
     display: grid;
-    grid-template-columns: repeat(2, min-content);
-    justify-content: space-between;
-    border: 1vh red solid;
 }
 
 .info {
@@ -67,6 +97,23 @@ html {
 
 .temperature-wrapper {
     font-size: 4rem;
+}
+
+.search-field {
+    display: flex;
+    justify-content: start;
+    padding-top: 1vh;
+}
+
+.search-field>input {
+    display: flex;
+    appearance: none;
+    width: 20vh;
+    height: 3vh;
+    font-size: 1rem;
+    padding: 1vh;
+    border-radius: 1vh;
+
 }
 
 .button-wrapper {
@@ -114,17 +161,16 @@ html {
 }
 
 .forecast-weather {
-    border: 1vh blue solid;
     display: grid;
     gap: 1vh;
     grid-template-rows: min-content 1fr;
+    height: min-content;
 }
 
 .buttons-wrapper {
     display: grid;
     grid-template-columns: repeat(3, min-content);
     gap: 2vh;
-    padding: 1vh;
 }
 
 .changer {
@@ -134,6 +180,12 @@ html {
     grid-template-columns: repeat(5, min-content);
     opacity: 0;
     visibility: hidden;
+    padding: 1vh;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+    fill: #1d89e1;
 }
 
 .down,
@@ -148,10 +200,11 @@ html {
     border: 0.1vh black solid;
     border-radius: 50%;
     cursor: pointer;
+    background-color: white;
 }
 
 .tab:hover {
-    border: 0.3vh black solid;
+    border: 0.3vh rgb(29, 137, 225) solid;
 }
 
 .forecast-days,
@@ -162,15 +215,15 @@ html {
 
 .panel-wrapper {
     display: grid;
-    padding: 1vh;
     align-items: center;
-    border: 1px red solid;
+    height: min-content;
 }
 
 .panel {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 25vh);
+    grid-template-columns: repeat(auto-fill, 23vh);
     gap: 2vh;
+    height: min-content;
 }
 
 .f {
@@ -178,6 +231,8 @@ html {
     gap: 1vh;
     padding: 1vh;
     text-align: start;
+    width: 23vh;
+    height: min-content;
 }
 
 .f>.name {
@@ -197,10 +252,31 @@ html {
     padding-bottom: 1vh;
 }
 
+.f>.icon-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 6rem;
+}
+
 .h>.temperature-wrapper {
     font-size: 2.5rem;
 }
 
-@media screen and (max-aspect-ratio: 1/1.0000001) {}
+.active {
+    border: 0.5vh #1d89e1 solid;
+}
 
-@media screen and (min-aspect-ratio: 1/1) {}
+@media screen and (max-aspect-ratio: 1/1.0000001) {
+    .current-weather {
+        grid-template-rows: repeat(2, min-content);
+        justify-items: center;
+        gap: 1vh
+    }
+}
+
+@media screen and (min-aspect-ratio: 1/1) {
+    .current-weather {
+        grid-template-columns: repeat(2, min-content);
+        justify-content: space-between;
+    }
+}

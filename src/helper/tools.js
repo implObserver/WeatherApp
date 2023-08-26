@@ -11,9 +11,8 @@ export const asyncQuerySelector = async (node, query) => {
 };
 
 export const removeChilds = (node) => {
-    if (node !== null) {
-        while (node.firstChild) {
-            node.removeChild(node.lastChild);
-        }
+    while (node.firstChild) {
+        node.removeChild(node.lastChild);
     }
-}
+    console.log(node)
+};

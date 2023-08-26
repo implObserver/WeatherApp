@@ -6,7 +6,7 @@ export const building = async (fHour, lHour) => {
     removeChilds(panel);
     for (let i = fHour; i < lHour; i++) {
         const hour = await getTemplateNode('.hour');
-        hour.className = `f h hour${i}`;
+        hour.className = `f h hour${i} background`;
         panel.appendChild(hour);
     }
 };

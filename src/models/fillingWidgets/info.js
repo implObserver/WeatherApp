@@ -1,3 +1,5 @@
+import { removeChilds } from '../../helper/tools';
+import { setRandomWallpaper } from '../../views/nodes/wrapperBackground';
 import { getCurrentWeatherForCity } from '../weatherApi';
 import { Info } from '../widgets';
 
@@ -12,7 +14,9 @@ export const fillCurrentWeatherData = async (city) => {
         Info.date.textContent = date;
         Info.time.textContent = time;
         Info.temperature.textContent = `${data.current.temp_c} \xB0C`;
+        removeChilds(Info.icon);
         Info.icon.appendChild(image);
+        setRandomWallpaper(data.current.condition.text.replaceAll(' ', '_'));
     } catch (error) {
         console.log('Error:', error);
     }
