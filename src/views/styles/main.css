@@ -80,12 +80,14 @@ button {
 
 .info {
     display: grid;
-    width: max-content;
+    width: min-content;
     height: min-content;
     padding: 2rem;
 }
 
 .description {
+    display: flex;
+    justify-content: start;
     font-size: 3rem;
 }
 
