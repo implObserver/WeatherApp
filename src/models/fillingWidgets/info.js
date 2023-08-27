@@ -1,6 +1,5 @@
 import { removeChilds } from '../../helper/tools';
 import { setRandomWallpaper } from '../../views/nodes/wrapperBackground';
-import { States } from '../states';
 import { getCurrentWeatherForCity } from '../weatherApi';
 import { Info } from '../widgets';
 

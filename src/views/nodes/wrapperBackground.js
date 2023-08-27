@@ -1,5 +1,4 @@
 import { getIcon } from '../../models/fillingWidgets/info';
-import { States } from '../../models/states';
 import { getRandomWallpaper } from '../../models/wallpaperApi';
 
 let url;
@@ -26,12 +25,10 @@ const testImage = async (URL) => {
 }
 
 const imageFound = async () => {
-    console.log('w')
     setWallpaper();
 }
 
 const imageNotFound = async () => {
-    console.log('ww')
     setDefaultWallpaper();
 }
 
@@ -43,7 +40,6 @@ const setDefaultWallpaper = async () => {
 }
 
 const setWallpaper = async () => {
-    console.log('wf')
     const wrapper = document.querySelector('.wrapper');
     wrapper.style.backgroundImage = `url('${url}')`;
 }
