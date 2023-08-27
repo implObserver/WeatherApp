@@ -10,6 +10,5 @@ export const getRandomWallpaper = async (promise) => {
         return data;
     } catch (error) {
         console.log('Error:', error);
-        alert(error);
     }
 };

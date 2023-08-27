@@ -1,5 +1,8 @@
 import { getIcon } from '../../models/fillingWidgets/info';
+import { States } from '../../models/states';
 import { getRandomWallpaper } from '../../models/wallpaperApi';
+
+let url;
 
 export const setRandomWallpaper = async (option) => {
     try {
@@ -7,29 +10,40 @@ export const setRandomWallpaper = async (option) => {
         const hits = data.hits;
         const index = Math.floor(Math.random() * hits.length);
         const image = await getIcon(data.hits[index].largeImageURL);
-        testImage(image.src);
+        url = image.src;
+        testImage(url);
     } catch (error) {
         console.log('Error:', error);
-        alert(error);
     }
 };
 
 
-function testImage(URL) {
+const testImage = async (URL) => {
     var tester = new Image();
-    tester.onload = imageFound(URL);
+    tester.onload = imageFound;
     tester.onerror = imageNotFound;
     tester.src = URL;
 }
 
-function imageFound(URL) {
-    const wrapper = document.querySelector('.wrapper');
-    wrapper.style.backgroundImage = `url('${URL}')`;
+const imageFound = async () => {
+    console.log('w')
+    setWallpaper();
 }
 
-function imageNotFound() {
+const imageNotFound = async () => {
+    console.log('ww')
+    setDefaultWallpaper();
+}
+
+const setDefaultWallpaper = async () => {
     const wrapper = document.querySelector('.wrapper');
     const wallpaper = new Image();
     wallpaper.src = require(`../images/default.jpg`);
     wrapper.style.backgroundImage = `url('${wallpaper.src}')`;
+}
+
+const setWallpaper = async () => {
+    console.log('wf')
+    const wrapper = document.querySelector('.wrapper');
+    wrapper.style.backgroundImage = `url('${url}')`;
 }
